@@ -1,0 +1,21 @@
+{
+  "name": "login-forms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remote-webcreation/login-forms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/remote-webcreation/login-forms/issues"
+  },
+  "homepage": "https://github.com/remote-webcreation/login-forms#readme",
+  "description": ""
+}
