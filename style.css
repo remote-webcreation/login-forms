@@ -1,9 +1,17 @@
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
-    --background-color: #ecf0f1;
+    --background-color: #cee4e9;
     --text-color: #2c3e50;
+    --text-light: whitesmoke;
     --error-color: #e74c3c;
+
+
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -12,8 +20,184 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    color: var(--text-light);
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    height: fit-content;
+    padding: 2rem;
+    h1 {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    .form-1 {
+        width: 100%;
+        max-width: 30rem;
+        height: 15.625rem;
+        box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.15);
+        /* background: linear-gradient(to right, #3498db, #2ecc71); */
+        background-image: url("/login-forms/style/clouds.jpeg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        .innercontainer {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(245, 245, 245, 0.406);
+            border-radius: 1rem;
+            backdrop-filter: blur(2.5px);
+            padding: 1rem;
+            box-sizing: border-box;
+            background-color: #f8f8f81d;
+            gap: 1rem;
+            h2 {
+                font-size: 1.5em;
+                margin: 0;
+                line-height: 1;
+                color: #4f6c82;
+            }
+            .small-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: .25rem;
+                p {
+                    font-size: .7em;
+                    margin: 0;
+                    color: #ffffff;
+                    font-weight: 700;
+                    line-height: 1em;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            form {
+                box-sizing: border-box;
+                width: 70%;
+                border: 0.75px solid rgba(245, 245, 245, 0.454);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2rem;
+                background-color: #eaeff03a;
+                position: relative;
+                input {
+                    width: 100%;
+                    height: 2rem;
+                    border-radius: 2rem;
+                    border: none;
+                    background-color: #ececec00;
+                    padding: .5rem;
+                    padding-left: 1rem;
+                    font-size: .8em;
+                    color: rgb(105, 104, 104);
+                }
+                button {
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    border: none;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #3498db;
+                    transition: all 0.3s ease;
+                    i {
+                        color: #eaf8f0;
+                        font-size: .75em;
+                    }
+                    &:hover {
+                        background-color: #52a6de;
+                        cursor: pointer;
+                        i {
+                            color: #fdfdfd;
+                        }
+                    }
+                    &:active {
+                        background-color: #fbcab3;
+                        i {
+                            color: #52a6de;
+                        }
+                    }
+                }
+            }
+
+            .imgs-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                .jeff, .susie, .marc, .nina, .laura {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    transition: all .3s ease;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+                    transition: all 0.35s ease;
+                    border: 1px solid rgb(55, 92, 112);
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                        border: none;
+                    }
+                    &:active {
+                        transform: scale(0.9);
+                        border: none;
+                    }
+                }
+                .susie {
+                    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg);
+                }
+                .jeff {
+                    background-image: url(https://media.istockphoto.com/id/1919265357/de/foto/nahaufnahme-porträt-eines-selbstbewussten-geschäftsmannes-der-im-büro-steht.jpg?s=1024x1024&w=is&k=20&c=WwpcFzzjHhNEOj6FRKLbc0sls2wUvzcNDuNBhifQye0=);
+                }
+                .nina {
+                    background-image: url(https://media.istockphoto.com/id/2156363289/de/foto/professionelle-frau-die-im-modernen-büro-spricht-und-gestikuliert.jpg?s=1024x1024&w=is&k=20&c=4wEnJ2U8t_7rRFvYJfEPrdPqgt9iBvCZ1ajETlAn_WM=);
+                }
+                .marc {
+                    background-image: url(https://cdn.pixabay.com/photo/2018/04/10/04/11/model-3306311_1280.jpg);
+                }
+                .laura {
+                    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/03/35/girl-1867092_1280.jpg);
+                }
+            }
+            
+        }
+        &:hover {
+            box-shadow: 4px 6px 18px rgba(206, 228, 233, 0.3);
+        }
+    }
 }
